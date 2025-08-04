@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biologia Marinha - Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Biologia Marinha</h1>
+            <p>Explorando os mistérios dos oceanos</p>
+        </div>
+    </header>
+
+    <nav id="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="sobre" class="section">
+        <div class="container">
+            <div class="profile">
+                <img src="img/Dory1.jpg" alt="Foto do Biólogo Marinho">
+                <div class="bio">
+                    <h2>Sobre Mim</h2>
+                    <p>Sou um biólogo marinho apaixonado pela vida nos oceanos. Minha pesquisa se concentra em ecossistemas de recifes de coral e conservação marinha. Com mais de 10 anos de experiência em campo, já participei de expedições em diversos oceanos ao redor do mundo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="section dark">
+        <div class="container">
+            <h2>Meus Projetos</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="img/recife.jpg" alt="Recifes de Coral">
+                    <h3>Ecologia de Recifes</h3>
+                    <p>Estudo sobre a biodiversidade em recifes de coral e os impactos das mudanças climáticas.</p>
+                    <a href="projetos/recifes.html" class="btn">Saiba Mais</a>
+                </div>
+                <div class="project-card">
+                    <img src="img/leao marinho.jpg" alt="Baleias">
+                    <h3>Mamíferos Marinhos</h3>
+                    <p>Pesquisa sobre o comportamento e migração de baleias no Atlântico Sul.</p>
+                    <a href="projetos/mamiferos.html" class="btn">Saiba Mais</a>
+                </div>
+                <div class="project-card">
+                    <img src="img/conservação.png" alt="Tartaruga Marinha">
+                    <h3>Conservação Marinha</h3>
+                    <p>Projetos de preservação de espécies ameaçadas como tartarugas marinhas.</p>
+                    <a href="projetos/conservacao.html" class="btn">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="section">
+        <div class="container">
+            <h2>Galeria de Fotos</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="img/coral-Austrália-2.png" alt="Recife de Coral" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/quanto-tempo-vive-uma-baleia3.jpg" alt="Baleia" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/tartaruga2.jpg" alt="Tartaruga Marinha" onclick="openModal(this)">
+                </div>
+                <!-- Adicione mais itens conforme necessário -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para a galeria -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <section id="contato" class="section dark">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-researchgate"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Biologia Marinha Portfólio. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+<!-- Personagem flutuante -->
+<div id="character-container">
+    <div id="speech-bubble">
+        <p id="speech-text">Olá! Sou a Dory, dos incríveis. Vamos explorar o site juntos?</p>
+        <span id="close-bubble">&times;</span>
+    </div>
+    <img src="img/dory.png" alt="Personagem Dory" id="floating-character">
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
